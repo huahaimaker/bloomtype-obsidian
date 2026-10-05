@@ -44,6 +44,8 @@ or client telemetry. See [PRIVACY.md](PRIVACY.md) and [SECURITY.md](SECURITY.md)
 - 一键复制公众号兼容的富文本。
 - 切换笔记或修改原文后自动同步，带 450 ms 防抖。
 - 命令面板支持打开、同步、重载预览和浏览器打开。
+- 可在设置中开启本地图片同步，支持 Markdown 与 Obsidian 图片嵌入；单图限 1 MB，含图文稿限 5 MB，超限图片自动跳过并提示。公众号可能需要补传图片。
+- 在笔记 frontmatter 写 `bloomtype-theme: 主题名`（如 `晚樱`），同步时工作台自动切换该篇的主题（需新版工作台支持）。
 - 服务地址可配置，默认使用 [Bloomtype](https://mp.autoaihub.cn)。
 
 ## 安装
@@ -86,7 +88,7 @@ npm run install:vault -- /path/to/your/vault
 
 为了生成预览，插件会把当前 Markdown 笔记内容通过受来源限制的 `postMessage` 发送给设置中配置的 Bloomtype 页面。默认页面为 `https://mp.autoaihub.cn`。
 
-- 插件不会读取当前 Markdown 笔记之外的文件。
+- 默认只读取当前 Markdown 笔记。可选择开启本地图片同步，仅读取当前笔记引用的图片；图片数据会随正文发送给配置的页面。
 - Obsidian 嵌入模式不会加载网站统计或客户端遥测脚本。
 - 远程服务地址必须使用 HTTPS；本机调试允许 localhost HTTP。
 - 超过 5 MB 的笔记不会自动同步。

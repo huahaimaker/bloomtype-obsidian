@@ -1,7 +1,7 @@
 {
   "id": "bloomtype-publisher",
   "name": "Bloomtype Publisher",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "minAppVersion": "1.13.0",
   "description": "Preview Markdown notes in Bloomtype and copy styled content to WeChat.",
   "author": "花海",

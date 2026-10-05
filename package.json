@@ -1,6 +1,6 @@
 {
   "name": "obsidian-bloomtype",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "在 Obsidian 侧栏中实时预览并复制公众号排版",
   "main": "main.js",
   "type": "module",
